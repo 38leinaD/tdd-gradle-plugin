@@ -1,0 +1,35 @@
+plugins {
+	id 'com.gradle.plugin-publish' version '0.9.7'
+}
+
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+
+pluginBundle {
+	website = 'https://github.com/38leinaD/tdd-gradle-plugin'
+	vcsUrl = 'https://github.com/38leinaD/tdd-gradle-plugin.git'
+	
+	plugins {
+		greetingsPlugin {
+			id = 'de.dplatz.tdd'
+			displayName = 'Test-driven-development Extensions'
+			description = 'Clears the screen before each run of the continuous-mode-build.'
+			tags = ['tdd', 'clear', 'continuous']
+			version = '0.1'
+		}
+	}
+}
+
+group = 'de.dplatz.gradle'
+version = '0.1-SNAPSHOT'
+
+repositories {
+    jcenter()
+	mavenLocal()
+}
+
+dependencies {
+	compile gradleApi()
+}
+
