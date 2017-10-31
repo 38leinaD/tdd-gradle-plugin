@@ -6,12 +6,21 @@ Unfortunately, it just appends to the terminal and thus it is sometimes hard for
 This plugin for Gradle clears the screen before each run of the continuous-mode-build.
 
 
+## Usage
+
+Add the following to the top of your `build.gradle`:
+
 ```
-todo
+plugins {
+	id "de.dplatz.tdd" version "0.1"
+}
 
 ```
 
+Run your build in continuous-mode. 
 
 ```
 gradle test -t
 ```
+
+Change your source-code so your tests are re-executed. The screen should be cleared before output of the test-run appears.
