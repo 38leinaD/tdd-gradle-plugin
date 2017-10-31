@@ -1,4 +1,4 @@
-## Test-Driven Development for Gradle
+## Continuous-mode clear-screen
 
 The continuous-mode (-t) of Gradle allows to immediately rerun test on each code-change.
 Unfortunately, it just appends to the terminal and thus it is sometimes hard for the brain to immediately find the output of the current test-run.
@@ -12,7 +12,7 @@ Add the following to the top of your `build.gradle`:
 
 ```
 plugins {
-	id "de.dplatz.tdd" version "0.1"
+	id "de.dplatz.clear" version "0.3"
 }
 
 ```
